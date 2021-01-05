@@ -1,7 +1,7 @@
 a = int(input('Please, enter a number: '))
 b = int(input('Please, enter a number: '))
 c = a
-def mult(a, b, c, list1):
+def mult(a, b, c):
     for i in range(1, b):
         if i <= b:
             a += c
@@ -9,4 +9,4 @@ def mult(a, b, c, list1):
         return('0')
     else:
         return(a)
-print(mult(a, b, c, list1))
+print(mult(a, b, c))
