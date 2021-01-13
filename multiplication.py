@@ -1,22 +1,27 @@
-a = int(input('Please, enter a number: '))
-b = int(input('Please, enter a number: '))
+#ЦИКЛ
+def fuctorial(a):
+    res = 1
+    for i in range(1, a + 1):
+        res *= i
+    return(res)
+print(fuctorial(5))
 
-def mult(a, b):
-    c = a
-    if a == 0 or b == 0:
-        return(0)
+#РЕКУРСИЯ
+def fuctorial(a, res):
+    if a == 0 or a==1:
+        return res
+    else:
+        return fuctorial(a-1, (res*(a)))
+print(fuctorial(6, 1))
 
-    if b < 0:
-        b = -b
-        for i in range(1, b):
-            if i <= b:
-                a += c
-        return (-a)
+#ИТЕРАЦИЯ
+def fuctorial(a, res):
+    if a == 0 or a==1:
+        return res
+    else:
+        res = 1
+        for i in range(1, a + 1):
+            res *= i
+        return (res)
 
-    for i in range(1, b):
-        if i <= b:
-            a += c
-
-    return(a)
-
-print(mult(a, b))
+print(fuctorial(6,1))
